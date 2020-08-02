@@ -65,12 +65,10 @@ body {
 @-webkit-keyframes anim-pul {
     0% {
         opacity: .3;
-        color: rgb(179, 179, 179);
     }
 
     50% {
         opacity: 1;
-        color: rgba(255, 145, 0, 0.733);
     }
 
     100% {
@@ -79,5 +77,72 @@ body {
 }
 
 
-
 /*end of header*/
+
+/*----------------------*/
+
+/*===About*/
+.title-text {
+    text-align: center;
+}
+
+#about {
+    padding: 35px;
+}
+
+.about {
+    margin: 25px;
+    display: flex;
+}
+
+.about-items-icon {
+    font-size: 50px;
+    color: #0471d6b4;
+    margin-right: 20px;
+}
+
+.about-items-icon .halal {
+    font-size: 30px;
+    color: #0471d6b4;
+    margin-right: 20px;
+}
+
+.about-tagline {
+    text-transform: uppercase;
+    color: #0471d6b4;
+    font-size: 20px;
+}
+
+.about-items-info {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.about-items-icon:hover,
+.about-tagline:hover,
+.halal:hover {
+    transition: transform 2s ease, color 2s ease;
+    transform: translateY(-10px);
+    color: #153bb8e1;
+    cursor: pointer;
+}
+
+@media screen and (min-width:575px) {
+    .about-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .about {
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+
+@media screen and (min-width:970px) {}
+
+.about {
+    flex: 0 0 calc(33.35% - 15px)
+}
+
+/*==End of about*/
