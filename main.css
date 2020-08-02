@@ -151,7 +151,7 @@ body {
 /*=======Menu*/
 .menu-img {
     height: 80vh;
-    background: url(/images/menu.jpg) center/cover fixed no-repeat;
+    background: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F07%2Fcutting-meat-paleo-ft-blog0717.jpg&q=85) center/cover fixed no-repeat;
 }
 
 .menu-txt {
@@ -221,6 +221,28 @@ body {
 /*==End of Menu*/
 /*social icon starts*/
 
-#social-icons {}
+#social-icons {
+    height: 150px;
+    background: #ffffff;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+#social-icons a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 40px;
+    border-radius: 5px;
+    transition: transform 1s ease, color 1s ease;
+}
+
+#social-icons a:hover {
+    transform: translateY(-16px);
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
 
 /*social icon ends*/
