@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Baloo Thambi 2', cursive;
     line-height: 1.5;
@@ -17,6 +18,23 @@ body {
     background: linear-gradient(rgba(43, 43, 36, 0.808), rgba(7, 8, 7, 0.473)),
         url(https://www.bluezones.com/wp-content/uploads/2016/12/plantprotein-760x480.jpg) center/cover no-repeat fixed;
     margin-top: auto;
+    clip-path: polygon(30% 0%, 100% 30%, 30% 100%, 0% 30%);
+}
+
+.section {
+    background: url(https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/healthy-eating-ingredients-1296x728-header.jpg?w=1155&h=1528);
+    clip-path: circle(60%);
+    opacity: .9;
+}
+
+@media screen and (max-width:775px) {
+    .header {
+        clip-path: none;
+    }
+
+    .section {
+        clip-path: none;
+    }
 }
 
 .hero-img {
@@ -210,7 +228,7 @@ body {
 
     .menu-img {
         flex: 0 0 65%;
-        clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+        clip-path: circle(60%);
     }
 
     .menu {
