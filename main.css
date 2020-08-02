@@ -238,7 +238,7 @@ body {
 }
 
 #social-icons a:hover {
-    transform: translateY(-16px);
+    transform: translate3d(10px, -16px, 5px);
 }
 
 .fa-facebook {
@@ -247,6 +247,10 @@ body {
 
 .fa-twitter {
     color: #38a1f3;
+}
+
+.fa-instagram {
+    color: #e1306c;
 }
 
 /*social icon ends*/
