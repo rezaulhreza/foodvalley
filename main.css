@@ -1,0 +1,23 @@
+/*universal selector*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo Thambi 2', cursive;
+    line-height: 1.5;
+
+}
+
+/*header*/
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(43, 43, 36, 0.808), rgba(7, 8, 7, 0.473)), url(/images/her.jpg) center/cover no-repeat fixed;
+    margin-top: auto;
+}
+
+
+
+/*end of header*/
