@@ -14,7 +14,8 @@ body {
 /*header*/
 .header {
     min-height: 100vh;
-    background: linear-gradient(rgba(43, 43, 36, 0.808), rgba(7, 8, 7, 0.473)), url(/images/her.jpg) center/cover no-repeat fixed;
+    background: linear-gradient(rgba(43, 43, 36, 0.808), rgba(7, 8, 7, 0.473)),
+        url(https://www.bluezones.com/wp-content/uploads/2016/12/plantprotein-760x480.jpg) center/cover no-repeat fixed;
     margin-top: auto;
 }
 
