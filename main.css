@@ -184,8 +184,27 @@ body {
     padding: 13px 20px;
     border-radius: 100px;
     font-weight: bold;
-    background: rgba(7, 8, 7, 0.473);
-    color: whitesmoke;
+    background: rgba(255, 255, 255, 0.705);
+    color: #0471d6b4;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.705);
+}
+
+.menu-txt a:hover {
+    color: white;
+    background: #0471d6b4;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width:775px) {
+    .menu {
+        display: flex;
+    }
+
+    .menu-txt {
+        flex: 0 0 30%;
+    }
 }
 
 /*==End of Menu*/
