@@ -239,7 +239,7 @@ body {
 
 #social-icons {
   height: 150px;
-  background: #ffffff;
+
   text-align: center;
   padding: 50px 0 50px 0;
 }
@@ -273,7 +273,15 @@ body {
 /*gallery*/
 #carouselExampleCaptions {
   margin: 20%;
-  height: 380px;
+  height: 40vh;
+}
+
+@media screen and(max-width:775px) {
+  #carouselExampleCaptions {
+    height: 100vh;
+  }
+
+
 }
 
 .gallery {
@@ -286,3 +294,6 @@ body {
   font-family: "Baloo Thambi 2",
     cursive;
   text-align: center;
+}
+
+/*=======================footer================================================*/
