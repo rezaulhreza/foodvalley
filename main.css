@@ -273,11 +273,12 @@ body {
 /*gallery*/
 #carouselExampleCaptions {
   margin: 20%;
+  height: 380px;
 }
 
 .gallery {
   background: linear-gradient(rgba(122, 122, 122, 0.808), rgba(49, 54, 49, 0.473)),
-    url(/images/her.jpg) center fixed;
+    url(https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg) center fixed;
 }
 
 /*social*/
