@@ -277,5 +277,11 @@ body {
 
 .gallery {
   background: linear-gradient(rgba(122, 122, 122, 0.808), rgba(49, 54, 49, 0.473)),
-    url(https://www.pexels.com/photo/blur-breakfast-chef-cooking-262978/) center fixed;
+    url(/images/her.jpg) center fixed;
 }
+
+/*social*/
+.social {
+  font-family: "Baloo Thambi 2",
+    cursive;
+  text-align: center;
