@@ -9,6 +9,9 @@ body {
   font-family: "Baloo Thambi 2", cursive;
   line-height: 1.5;
 }
+.bg-section {
+  background: orange;
+}
 
 /*header*/
 .header {
