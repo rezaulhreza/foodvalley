@@ -101,7 +101,7 @@ nav .icon-burger .line {
   transition: all 0.3s ease-in-out;
 }
 /* Media max 500px */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   nav .logo {
     float: none;
     width: auto;
@@ -114,7 +114,7 @@ nav .icon-burger .line {
     z-index: 9;
     left: 0;
     right: 0;
-    top: 50px;
+    top: 100px;
     bottom: 100%;
     width: auto;
     height: auto;
@@ -180,6 +180,12 @@ nav .icon-burger .line {
   color: rgba(255, 255, 255, 0.705);
   font-size: 40px;
 }
+@media screen and (max-width: 576px) {
+  .hero-img .title {
+    padding-left: 25px;
+    font-size: 30px;
+  }
+}
 
 .btn-hero {
   display: inline-block;
@@ -188,17 +194,21 @@ nav .icon-burger .line {
   padding: 10px 20px;
   border-radius: 100px;
   font-weight: bolder;
-  background: #0471d6b4;
-  color: rgba(255, 255, 255, 0.705);
+  background: orange;
+  color: #464646;
   cursor: pointer;
-  border: 2px solid #0471d6b4;
+  border: 2px solid orange;
   margin-top: 10px;
 }
 
 .btn-hero:hover {
-  background: rgba(255, 255, 255, 0.705);
-  color: #0471d6b4;
+  background: #464646;
+  color: orange;
   border: none;
+  text-decoration: none;
+}
+.btn-hero a:hover {
+  text-decoration: none;
 }
 
 .anim-pul {
@@ -207,10 +217,15 @@ nav .icon-burger .line {
   opacity: 0.3;
   color: rgb(0, 0, 0);
 }
+.menu .anim-pul {
+  animation: anim-pul 3s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0.3;
+}
 
 @-webkit-keyframes anim-pul {
   0% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 
   50% {
@@ -218,7 +233,7 @@ nav .icon-burger .line {
   }
 
   100% {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 }
 
@@ -403,7 +418,10 @@ nav .icon-burger .line {
 /*gallery*/
 #carouselExampleCaptions {
   margin: 20%;
-  height: 40vh;
+  height: 70vh;
+}
+#carouselExampleCaptions img {
+  height: auto;
 }
 
 @media screen and(max-width:775px) {
