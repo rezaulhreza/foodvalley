@@ -5,18 +5,42 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header: linear-gradient(rgba(80, 80, 73, 0.808), rgba(49, 54, 49, 0.473));
+  --logo: #ffff;
+  --bg: #e6e4e4;
+  --footer: #8a6813;
+  --nav-bg: #8a6813;
+  --nav-links: #ffffff;
+  --nav-links-hover: #493702d0;
+  --nav-links-hover-mobile: #493702a2;
+  --button: #8a6813;
+  --home-title: #ebe8e8;
+  --about-title: #ffffff;
+  --about-title-bg: #8a6813;
+  --icon: #8a6813;
+  --menu-bg: #8a6813;
+  --menu-text: #ffff;
+  findsocialbg: linear-gradient(
+    rgb(134, 138, 139),
+    rgba(127, 173, 127, 0.404),
+    rgb(142, 142, 199)
+  );
+  --findSocial: #0000;
+}
+
 body {
   font-family: "Baloo Thambi 2", cursive;
   line-height: 1.5;
 }
 .bg-section {
-  background: orange;
+  var: (--bg);
 }
 
 /*header*/
 .header {
   min-height: 100vh;
-  background: linear-gradient(rgba(80, 80, 73, 0.808), rgba(49, 54, 49, 0.473)),
+  background: var(--header),
     url(https://www.bluezones.com/wp-content/uploads/2016/12/plantprotein-760x480.jpg)
       center/cover no-repeat fixed;
   margin-top: auto;
@@ -30,16 +54,18 @@ body {
   clip-path: circle(65%);
   opacity: 0.9;
 }
-/*======navbar=====*/
+
+/*====================================Navbar=========================*/
 nav {
   position: fixed;
+  background: var(--nav-links-hover);
   z-index: 10;
   left: 0;
   right: 0;
   top: 0;
   padding: 0 5%;
   height: 100px;
-  background-color: orange;
+  /*background-color: rgba(255, 166, 0, 0.788);*/
 }
 
 nav .logo {
@@ -49,6 +75,7 @@ nav .logo {
   display: flex;
   align-items: center;
   font-size: 25px;
+  color: var(--logo);
 }
 
 nav .links {
@@ -68,15 +95,17 @@ nav .links li {
 
 nav .links a {
   display: block;
+  color: var(--nav-links);
   padding: 1em;
   font-size: 15px;
   font-weight: bold;
-  color: black;
+  /*color: black;*/
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: gainsboro;
+  /*background-color: gainsboro;*/
+  background-color: var(--nav-bg);
 }
 
 #nav-toggle {
@@ -95,12 +124,12 @@ nav .icon-burger {
 nav .icon-burger .line {
   width: 30px;
   height: 5px;
-  background-color: black;
+  background-color: var(--logo);
   margin: 5px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
-/* Media max 500px */
+/* ========================Media max 768px NAVBAR======================= */
 @media screen and (max-width: 768px) {
   nav .logo {
     float: none;
@@ -119,13 +148,13 @@ nav .icon-burger .line {
     width: auto;
     height: auto;
     flex-direction: column;
-    background-color: rgba(49, 54, 49, 0.473);
+    background-color: var(--nav-links-hover);
     overflow: hidden;
     transition: all 0.5s ease-in-out;
   }
 
   li a:hover {
-    background-color: white;
+    background-color: var(--nav-links-hover-mobile);
   }
 
   nav .links a {
@@ -177,7 +206,7 @@ nav .icon-burger .line {
 }
 
 .hero-img .title {
-  color: rgba(255, 255, 255, 0.705);
+  color: var(--home-title);
   font-size: 40px;
 }
 @media screen and (max-width: 576px) {
@@ -194,16 +223,16 @@ nav .icon-burger .line {
   padding: 10px 20px;
   border-radius: 100px;
   font-weight: bolder;
-  background: orange;
-  color: #464646;
+  background: var(--button);
+  color: var(--logo);
   cursor: pointer;
-  border: 2px solid orange;
+  border: 2px solid var(--button);
   margin-top: 10px;
 }
 
 .btn-hero:hover {
-  background: #464646;
-  color: orange;
+  background: var(--logo);
+  color: var(--button);
   border: none;
   text-decoration: none;
 }
@@ -215,7 +244,7 @@ nav .icon-burger .line {
   animation: anim-pul 3s ease-in-out;
   animation-iteration-count: infinite;
   opacity: 0.3;
-  color: rgb(0, 0, 0);
+  /*color: rgb(0, 0, 0);*/
 }
 .menu .anim-pul {
   animation: anim-pul 3s ease-in-out;
@@ -244,6 +273,7 @@ nav .icon-burger .line {
 /*===About*/
 .title-text {
   text-align: center;
+  color: var(--header);
 }
 
 #about {
@@ -253,23 +283,24 @@ nav .icon-burger .line {
 .about {
   margin: 25px;
   display: flex;
+  color: var(--about-title-bg);
 }
 
 .about-items-icon {
   font-size: 50px;
-  color: #464545;
+  /*color: #464545;*/
   margin-right: 20px;
 }
 
 .about-items-icon .halal {
   font-size: 30px;
-  color: #464545;
+  /*color: #464545;*/
   margin-right: 20px;
 }
 
 .about-tagline {
   text-transform: uppercase;
-  color: #221f1f;
+  /*color: #221f1f;*/
   font-size: 20px;
 }
 
@@ -283,7 +314,7 @@ nav .icon-burger .line {
 .halal:hover {
   transition: transform 2s ease, color 2s ease;
   transform: translateY(-10px);
-  color: rgba(22, 22, 21, 0.788);
+  /*color: rgba(22, 22, 21, 0.788);*/
   cursor: pointer;
 }
 
@@ -318,11 +349,11 @@ nav .icon-burger .line {
 .menu-txt {
   min-height: 80vh;
   align-items: center;
-  background: orange;
-  columns: #000;
+  /*background: orange;
+  columns: #000;*/
   padding: 40px 0;
   background: #464545;
-  color: rgb(197, 194, 194);
+  /*color: rgb(197, 194, 194);*/
 }
 
 .menu-txt-center {
@@ -347,15 +378,15 @@ nav .icon-burger .line {
   padding: 13px 20px;
   border-radius: 100px;
   font-weight: bold;
-  background: orange;
-  color: rgb(226, 226, 226);
+  /*background: orange;
+  color: rgb(226, 226, 226);*/
   cursor: pointer;
-  border: 2px solid orange;
+  /*border: 2px solid orange;*/
 }
 
 .menu-txt a:hover {
   color: orange;
-  background: #2c2c2cc9;
+  /*background: #2c2c2cc9;*/
   border: none;
   cursor: pointer;
 }
@@ -375,7 +406,7 @@ nav .icon-burger .line {
   }
 
   .menu {
-    background: orange;
+    /*background: orange;*/
   }
 }
 
