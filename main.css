@@ -36,8 +36,9 @@ nav {
   top: 0;
   padding: 0 5%;
   height: 100px;
-  background-color: rgba(255, 166, 0, 0.726);
+  background-color: orange;
 }
+
 nav .logo {
   float: left;
   width: 40%;
@@ -46,31 +47,38 @@ nav .logo {
   align-items: center;
   font-size: 25px;
 }
+
 nav .links {
   float: right;
   padding: 0;
   margin: 0;
-  width: 60%;
+  width: 35%;
   height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 nav .links li {
   list-style: none;
 }
+
 nav .links a {
   display: block;
   padding: 1em;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
-  color: #ffffff;
-  background-color: rgba(58, 57, 57, 0.808);
+  color: black;
   text-decoration: none;
+}
+
+li a:hover {
+  background-color: gainsboro;
 }
 
 #nav-toggle {
   position: absolute;
+  top: -50px;
 }
 
 nav .icon-burger {
@@ -80,24 +88,65 @@ nav .icon-burger {
   top: 50%;
   transform: translateY(-50%);
 }
+
 nav .icon-burger .line {
   width: 30px;
   height: 5px;
-  background-color: #ffffff;
+  background-color: black;
   margin: 5px;
   border-radius: 3px;
+  transition: all 0.3s ease-in-out;
 }
-@media screen and (max-width: 768px) {
+/* Media max 500px */
+@media screen and (max-width: 576px) {
   nav .logo {
     float: none;
     width: auto;
     justify-content: center;
   }
+
   nav .links {
-    display: none;
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    background-color: rgba(49, 54, 49, 0.473);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
   }
+
+  li a:hover {
+    background-color: white;
+  }
+
+  nav .links a {
+    font-size: 12px;
+  }
+
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+
   nav .icon-burger {
     display: block;
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
   }
 }
 
@@ -190,19 +239,19 @@ nav .icon-burger .line {
 
 .about-items-icon {
   font-size: 50px;
-  color: #0471d6b4;
+  color: #464545;
   margin-right: 20px;
 }
 
 .about-items-icon .halal {
   font-size: 30px;
-  color: #0471d6b4;
+  color: #464545;
   margin-right: 20px;
 }
 
 .about-tagline {
   text-transform: uppercase;
-  color: #0471d6b4;
+  color: #221f1f;
   font-size: 20px;
 }
 
@@ -216,7 +265,7 @@ nav .icon-burger .line {
 .halal:hover {
   transition: transform 2s ease, color 2s ease;
   transform: translateY(-10px);
-  color: #153bb8e1;
+  color: rgba(22, 22, 21, 0.788);
   cursor: pointer;
 }
 
@@ -254,8 +303,8 @@ nav .icon-burger .line {
   background: orange;
   columns: #000;
   padding: 40px 0;
-  background: #cecece;
-  color: #000;
+  background: #464545;
+  color: rgb(197, 194, 194);
 }
 
 .menu-txt-center {
@@ -280,15 +329,15 @@ nav .icon-burger .line {
   padding: 13px 20px;
   border-radius: 100px;
   font-weight: bold;
-  background: #000000;
-  color: #cecece;
+  background: orange;
+  color: rgb(226, 226, 226);
   cursor: pointer;
-  border: 2px solid rgba(255, 255, 255, 0.705);
+  border: 2px solid orange;
 }
 
 .menu-txt a:hover {
-  color: rgb(59, 59, 59);
-  background: #ffffff;
+  color: orange;
+  background: #2c2c2cc9;
   border: none;
   cursor: pointer;
 }
@@ -308,7 +357,7 @@ nav .icon-burger .line {
   }
 
   .menu {
-    background: #cecece;
+    background: orange;
   }
 }
 
