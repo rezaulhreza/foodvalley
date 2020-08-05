@@ -88,10 +88,15 @@ nav .icon-burger .line {
   border-radius: 3px;
 }
 @media screen and (max-width: 768px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
   nav .links {
     display: none;
   }
-  anv .icon-burger {
+  nav .icon-burger {
     display: block;
   }
 }
