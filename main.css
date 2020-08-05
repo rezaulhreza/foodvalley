@@ -14,7 +14,8 @@ body {
 .header {
   min-height: 100vh;
   background: linear-gradient(rgba(80, 80, 73, 0.808), rgba(49, 54, 49, 0.473)),
-    url(https://www.bluezones.com/wp-content/uploads/2016/12/plantprotein-760x480.jpg) center/cover no-repeat fixed;
+    url(https://www.bluezones.com/wp-content/uploads/2016/12/plantprotein-760x480.jpg)
+      center/cover no-repeat fixed;
   margin-top: auto;
   clip-path: polygon(100% 0%, 100% 30%, 30% 100%, 0% 30%);
 }
@@ -26,6 +27,68 @@ body {
   clip-path: circle(65%);
   opacity: 0.9;
 }
+/*======navbar=====*/
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 5%;
+  height: 100px;
+  background-color: rgba(255, 166, 0, 0.726);
+}
+nav .logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+}
+nav .links a {
+  display: block;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(58, 57, 57, 0.808);
+  text-decoration: none;
+}
+
+#nav-toggle {
+  position: absolute;
+}
+
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+/*==navbar ends===*/
 
 @media screen and (max-width: 775px) {
   .header {
@@ -156,7 +219,8 @@ body {
   }
 }
 
-@media screen and (min-width: 970px) {}
+@media screen and (min-width: 970px) {
+}
 
 .about {
   flex: 0 0 calc(33.35% - 15px);
@@ -167,7 +231,8 @@ body {
 /*=======Menu*/
 .menu-img {
   height: 80vh;
-  background: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F07%2Fcutting-meat-paleo-ft-blog0717.jpg&q=85) center/cover fixed no-repeat;
+  background: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F07%2Fcutting-meat-paleo-ft-blog0717.jpg&q=85)
+    center/cover fixed no-repeat;
 }
 
 .menu-txt {
@@ -280,19 +345,20 @@ body {
   #carouselExampleCaptions {
     height: 100vh;
   }
-
-
 }
 
 .gallery {
-  background: linear-gradient(rgba(122, 122, 122, 0.808), rgba(49, 54, 49, 0.473)),
-    url(https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg) center fixed;
+  background: linear-gradient(
+      rgba(122, 122, 122, 0.808),
+      rgba(49, 54, 49, 0.473)
+    ),
+    url(https://i.pinimg.com/736x/e6/7d/af/e67daf68a6e8f6d4a9283cb7d64b098c.jpg)
+      center fixed;
 }
 
 /*social*/
 .social {
-  font-family: "Baloo Thambi 2",
-    cursive;
+  font-family: "Baloo Thambi 2", cursive;
   text-align: center;
 }
 
