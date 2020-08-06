@@ -20,12 +20,8 @@
   --icon-hover: #47360e;
   --menu-bg: #8a6813;
   --menu-text: #ffff;
-  --findsocialbg: linear-gradient(
-    rgb(134, 138, 139),
-    rgba(127, 173, 127, 0.404),
-    rgb(142, 142, 199)
-  );
-  --findSocial: #0000;
+  --findsocialbg: linear-gradient(#8a6813, #47360e);
+  --findSocial: #ffffff;
 }
 
 body {
@@ -399,10 +395,6 @@ nav .icon-burger .line {
     flex: 0 0 65%;
     clip-path: circle(60%);
   }
-
-  .menu {
-    /*background: orange;*/
-  }
 }
 
 /*==End of Menu*/
@@ -410,7 +402,8 @@ nav .icon-burger .line {
 
 #social-icons {
   height: 150px;
-
+  background: var(--findsocialbg);
+  color: var(--logo);
   text-align: center;
   padding: 50px 0 50px 0;
 }
