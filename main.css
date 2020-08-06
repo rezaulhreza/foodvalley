@@ -6,22 +6,21 @@
 }
 
 :root {
-  --header: linear-gradient(rgba(80, 80, 73, 0.808), rgba(49, 54, 49, 0.473));
+  --header: linear-gradient(rgba(80, 80, 73, 0.808), rgba(76, 80, 76, 0.473));
   --logo: #ffff;
   --bg: #e6e4e4;
   --footer: #8a6813;
-  --nav-bg: #8a6813;
   --nav-links: #ffffff;
-  --nav-links-hover: #493702d0;
-  --nav-links-hover-mobile: #493702a2;
+  --nav-bg: #493702d0;
+  --nav-links-hover: #8a6813;
   --button: #8a6813;
-  --home-title: #ebe8e8;
+  --home-title: #dddddd;
   --about-title: #ffffff;
   --about-title-bg: #8a6813;
-  --icon: #8a6813;
+  --icon-hover: #47360e;
   --menu-bg: #8a6813;
   --menu-text: #ffff;
-  findsocialbg: linear-gradient(
+  --findsocialbg: linear-gradient(
     rgb(134, 138, 139),
     rgba(127, 173, 127, 0.404),
     rgb(142, 142, 199)
@@ -33,10 +32,6 @@ body {
   font-family: "Baloo Thambi 2", cursive;
   line-height: 1.5;
 }
-.bg-section {
-  var: (--bg);
-}
-
 /*header*/
 .header {
   min-height: 100vh;
@@ -58,14 +53,13 @@ body {
 /*====================================Navbar=========================*/
 nav {
   position: fixed;
-  background: var(--nav-links-hover);
+  background: var(--nav-bg);
   z-index: 10;
   left: 0;
   right: 0;
   top: 0;
   padding: 0 5%;
   height: 100px;
-  /*background-color: rgba(255, 166, 0, 0.788);*/
 }
 
 nav .logo {
@@ -105,7 +99,7 @@ nav .links a {
 
 li a:hover {
   /*background-color: gainsboro;*/
-  background-color: var(--nav-bg);
+  background-color: var(--nav-links-hover);
 }
 
 #nav-toggle {
@@ -131,6 +125,9 @@ nav .icon-burger .line {
 }
 /* ========================Media max 768px NAVBAR======================= */
 @media screen and (max-width: 768px) {
+  nav {
+    background: var(--nav-bg);
+  }
   nav .logo {
     float: none;
     width: auto;
@@ -148,13 +145,13 @@ nav .icon-burger .line {
     width: auto;
     height: auto;
     flex-direction: column;
-    background-color: var(--nav-links-hover);
+    background-color: var(--nav-bg);
     overflow: hidden;
     transition: all 0.5s ease-in-out;
   }
 
   li a:hover {
-    background-color: var(--nav-links-hover-mobile);
+    background-color: var(--nav-links-hover);
   }
 
   nav .links a {
@@ -186,7 +183,7 @@ nav .icon-burger .line {
 
 @media screen and (max-width: 775px) {
   .header {
-    clip-path: none;
+    clip-path: circle(40%);
   }
 
   .section {
@@ -273,7 +270,7 @@ nav .icon-burger .line {
 /*===About*/
 .title-text {
   text-align: center;
-  color: var(--header);
+  color: var(--nav-links-hover);
 }
 
 #about {
@@ -288,7 +285,6 @@ nav .icon-burger .line {
 
 .about-items-icon {
   font-size: 50px;
-  /*color: #464545;*/
   margin-right: 20px;
 }
 
@@ -314,7 +310,7 @@ nav .icon-burger .line {
 .halal:hover {
   transition: transform 2s ease, color 2s ease;
   transform: translateY(-10px);
-  /*color: rgba(22, 22, 21, 0.788);*/
+  color: var(--icon-hover);
   cursor: pointer;
 }
 
@@ -349,11 +345,10 @@ nav .icon-burger .line {
 .menu-txt {
   min-height: 80vh;
   align-items: center;
-  /*background: orange;
-  columns: #000;*/
+  columns: #000;
   padding: 40px 0;
-  background: #464545;
-  /*color: rgb(197, 194, 194);*/
+  background: var(--menu-bg);
+  color: var(--logo);
 }
 
 .menu-txt-center {
@@ -378,15 +373,15 @@ nav .icon-burger .line {
   padding: 13px 20px;
   border-radius: 100px;
   font-weight: bold;
-  /*background: orange;
-  color: rgb(226, 226, 226);*/
+  background: var(--logo);
+  color: var(--footer);
   cursor: pointer;
-  /*border: 2px solid orange;*/
+  border: 2px solid var(--menu-bg);
 }
 
 .menu-txt a:hover {
-  color: orange;
-  /*background: #2c2c2cc9;*/
+  color: var(--menu-text);
+  background: var(--menu-bg);
   border: none;
   cursor: pointer;
 }
